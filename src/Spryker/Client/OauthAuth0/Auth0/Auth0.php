@@ -20,19 +20,11 @@ class Auth0 implements Auth0Interface
      */
     protected $auth0Adapter;
 
-    /**
-     * @param \Spryker\Client\OauthAuth0\Dependency\External\Auth0AdapterInterface $auth0Adapter
-     */
     public function __construct(Auth0AdapterInterface $auth0Adapter)
     {
         $this->auth0Adapter = $auth0Adapter;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AccessTokenRequestTransfer $accessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AccessTokenResponseTransfer
-     */
     public function getAccessToken(AccessTokenRequestTransfer $accessTokenRequestTransfer): AccessTokenResponseTransfer
     {
         try {

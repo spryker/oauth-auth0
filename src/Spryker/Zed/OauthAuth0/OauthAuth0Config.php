@@ -39,9 +39,6 @@ class OauthAuth0Config extends AbstractBundleConfig
      */
     public const GRANT_TYPE_REFRESH_TOKEN = 'refresh_token';
 
-    /**
-     * @return string
-     */
     public function getProviderName(): string
     {
         return static::PROVIDER_NAME;

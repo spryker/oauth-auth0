@@ -20,11 +20,6 @@ class OauthAuth0DependencyProvider extends AbstractBundleDependencyProvider
      */
     public const CLIENT_OAUTH_AUTH0 = 'CLIENT_OAUTH_AUTH0';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideBusinessLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -33,11 +28,6 @@ class OauthAuth0DependencyProvider extends AbstractBundleDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addOauthAuth0Client(Container $container): Container
     {
         $container->set(static::CLIENT_OAUTH_AUTH0, function (Container $container) {

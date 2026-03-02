@@ -40,9 +40,6 @@ class OauthAuth0FacadeTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testAccessTokenRequestContainsNullCacheKeySeedIfProviderNameIsIncorrect(): void
     {
         // Arrange
@@ -56,9 +53,6 @@ class OauthAuth0FacadeTest extends Unit
         $this->assertNull($accessTokenRequestTransfer->getCacheKeySeed());
     }
 
-    /**
-     * @return void
-     */
     public function testAccessTokenRequestContainsCacheKeySeedIfProviderNameIsCorrect(): void
     {
         // Arrange
@@ -76,9 +70,6 @@ class OauthAuth0FacadeTest extends Unit
         $this->assertSame($accessTokenRequestTransfer->getCacheKeySeed(), $this->getCredentialsHash());
     }
 
-    /**
-     * @return string
-     */
     protected function getCredentialsHash(): string
     {
         return sha1(static::CLIENT_ID . static::CLIENT_SECRET);

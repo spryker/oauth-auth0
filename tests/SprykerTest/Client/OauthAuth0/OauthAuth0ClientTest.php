@@ -5,7 +5,7 @@
  * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
  */
 
-namespace SprykerTest\Client\OauthAuth0\Client;
+namespace SprykerTest\Client\OauthAuth0;
 
 use Codeception\Test\Unit;
 use Generated\Shared\Transfer\AccessTokenRequestOptionsTransfer;
@@ -22,7 +22,6 @@ use Spryker\Client\OauthAuth0\OauthAuth0DependencyProvider;
  * @group SprykerTest
  * @group Client
  * @group OauthAuth0
- * @group Client
  * @group OauthAuth0ClientTest
  * Add your own group annotations below this line
  */
@@ -53,9 +52,6 @@ class OauthAuth0ClientTest extends Unit
      */
     protected $tester;
 
-    /**
-     * @return void
-     */
     public function testGetAccessTokenReturnsValidToken(): void
     {
         // Arrange
@@ -89,9 +85,6 @@ class OauthAuth0ClientTest extends Unit
         $this->assertEquals($expectedAccessToken->getToken(), $accessTokenResponseTransfer->getAccessToken());
     }
 
-    /**
-     * @return void
-     */
     public function testGetAccessTokenReturnsErrorWhenGrantTypeNotSpecified(): void
     {
         // Arrange

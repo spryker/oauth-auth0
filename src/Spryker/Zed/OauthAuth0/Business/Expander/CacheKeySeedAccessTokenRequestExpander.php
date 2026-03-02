@@ -17,19 +17,11 @@ class CacheKeySeedAccessTokenRequestExpander implements CacheKeySeedAccessTokenR
      */
     protected OauthAuth0Config $auth0Config;
 
-    /**
-     * @param \Spryker\Zed\OauthAuth0\OauthAuth0Config $auth0Config
-     */
     public function __construct(OauthAuth0Config $auth0Config)
     {
         $this->auth0Config = $auth0Config;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AccessTokenRequestTransfer $accessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AccessTokenRequestTransfer
-     */
     public function expand(AccessTokenRequestTransfer $accessTokenRequestTransfer): AccessTokenRequestTransfer
     {
         if ($accessTokenRequestTransfer->getProviderName() !== $this->auth0Config->getProviderName()) {
@@ -40,9 +32,6 @@ class CacheKeySeedAccessTokenRequestExpander implements CacheKeySeedAccessTokenR
             ->setCacheKeySeed($this->getCredentialsHash());
     }
 
-    /**
-     * @return string
-     */
     protected function getCredentialsHash(): string
     {
         return sha1($this->auth0Config->getClientId() . $this->auth0Config->getClientSecret());

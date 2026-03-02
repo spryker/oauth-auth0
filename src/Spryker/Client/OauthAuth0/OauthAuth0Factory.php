@@ -13,17 +13,11 @@ use Spryker\Client\OauthAuth0\Dependency\External\Auth0AdapterInterface;
 
 class OauthAuth0Factory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Client\OauthAuth0\Dependency\External\Auth0AdapterInterface
-     */
     public function getAuth0Adapter(): Auth0AdapterInterface
     {
         return $this->getProvidedDependency(OauthAuth0DependencyProvider::CLIENT_AUTH0_ADAPTER);
     }
 
-    /**
-     * @return \Spryker\Client\OauthAuth0\Auth0\Auth0
-     */
     public function createAuth0(): Auth0
     {
         return new Auth0($this->getAuth0Adapter());

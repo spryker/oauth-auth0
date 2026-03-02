@@ -12,10 +12,5 @@ use Generated\Shared\Transfer\AccessTokenResponseTransfer;
 
 interface Auth0Interface
 {
-    /**
-     * @param \Generated\Shared\Transfer\AccessTokenRequestTransfer $accessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AccessTokenResponseTransfer
-     */
     public function getAccessToken(AccessTokenRequestTransfer $accessTokenRequestTransfer): AccessTokenResponseTransfer;
 }

@@ -17,20 +17,11 @@ class Auth0Adapter implements Auth0AdapterInterface
      */
     protected $auth0Client;
 
-    /**
-     * @param \Riskio\OAuth2\Client\Provider\Auth0 $auth0Client
-     */
     public function __construct(Auth0 $auth0Client)
     {
         $this->auth0Client = $auth0Client;
     }
 
-    /**
-     * @param string $grantType
-     * @param array $options
-     *
-     * @return \League\OAuth2\Client\Token\AccessTokenInterface
-     */
     public function getAccessToken(string $grantType, array $options = []): AccessTokenInterface
     {
         return $this->auth0Client->getAccessToken($grantType, $options);

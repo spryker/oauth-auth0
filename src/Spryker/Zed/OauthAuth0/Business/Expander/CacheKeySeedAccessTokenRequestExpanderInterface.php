@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\AccessTokenRequestTransfer;
 
 interface CacheKeySeedAccessTokenRequestExpanderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\AccessTokenRequestTransfer $accessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AccessTokenRequestTransfer
-     */
     public function expand(AccessTokenRequestTransfer $accessTokenRequestTransfer): AccessTokenRequestTransfer;
 }

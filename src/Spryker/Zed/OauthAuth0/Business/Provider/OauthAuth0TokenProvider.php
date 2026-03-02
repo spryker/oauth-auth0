@@ -18,19 +18,11 @@ class OauthAuth0TokenProvider implements OauthAuth0TokenProviderInterface
      */
     protected $oauthAuth0Client;
 
-    /**
-     * @param \Spryker\Client\OauthAuth0\OauthAuth0ClientInterface $oauthAuth0Client
-     */
     public function __construct(OauthAuth0ClientInterface $oauthAuth0Client)
     {
         $this->oauthAuth0Client = $oauthAuth0Client;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\AccessTokenRequestTransfer $accessTokenRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\AccessTokenResponseTransfer
-     */
     public function getAccessToken(AccessTokenRequestTransfer $accessTokenRequestTransfer): AccessTokenResponseTransfer
     {
         return $this->oauthAuth0Client->getAccessToken($accessTokenRequestTransfer);

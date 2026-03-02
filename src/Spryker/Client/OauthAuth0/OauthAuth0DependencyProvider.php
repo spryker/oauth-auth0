@@ -22,11 +22,6 @@ class OauthAuth0DependencyProvider extends AbstractDependencyProvider
      */
     public const CLIENT_AUTH0_ADAPTER = 'CLIENT_AUTH0_ADAPTER';
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     public function provideServiceLayerDependencies(Container $container): Container
     {
         $container = parent::provideServiceLayerDependencies($container);
@@ -36,11 +31,6 @@ class OauthAuth0DependencyProvider extends AbstractDependencyProvider
         return $container;
     }
 
-    /**
-     * @param \Spryker\Client\Kernel\Container $container
-     *
-     * @return \Spryker\Client\Kernel\Container
-     */
     protected function addAuth0ClientAdapter(Container $container): Container
     {
         $container->set(static::CLIENT_AUTH0_ADAPTER, function () {
