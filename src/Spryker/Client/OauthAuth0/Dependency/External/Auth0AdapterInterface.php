@@ -11,11 +11,5 @@ use League\OAuth2\Client\Token\AccessTokenInterface;
 
 interface Auth0AdapterInterface
 {
-    /**
-     * @param string $grantType
-     * @param array $options
-     *
-     * @return \League\OAuth2\Client\Token\AccessToken
-     */
     public function getAccessToken(string $grantType, array $options = []): AccessTokenInterface;
 }
