@@ -7,9 +7,9 @@
 
 namespace Spryker\Shared\OauthAuth0;
 
-use Spryker\Shared\Kernel\AbstractBundleConfig;
+use Spryker\Shared\Kernel\AbstractSharedConfig;
 
-class OauthAuth0Config extends AbstractBundleConfig
+class OauthAuth0Config extends AbstractSharedConfig
 {
     /**
      * @api
